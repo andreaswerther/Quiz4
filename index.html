@@ -2,20 +2,21 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8">
-  <title>Quiz 4 – Rechnen mit Licht</title>
+  <title>Quiz 4 – Rechnen mit Licht (mit Rechenschritten)</title>
   <style>
     body { font-family: Arial, sans-serif; background: #f4f4f4; margin: 0; padding: 20px; }
-    .container { max-width: 800px; margin: auto; background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+    .container { max-width: 900px; margin: auto; background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
     h1 { color: #222; }
     .task { margin-bottom: 30px; }
     textarea { width: 100%; height: 40px; font-size: 14px; margin-top: 5px; }
     button { margin-top: 5px; padding: 8px 12px; font-size: 14px; }
-    .feedback { display: none; margin-top: 10px; background: #eef; padding: 10px; border-radius: 5px; }
+    .feedback { display: none; margin-top: 10px; background: #eef; padding: 10px; border-radius: 5px; white-space: pre-wrap; }
   </style>
   <script>
     function showSolution(id, solution) {
       const elem = document.getElementById("solution_" + id);
-      elem.innerText = "Richtige Antwort: " + solution;
+      elem.innerText = "Richtige Antwort:
+" + solution;
       elem.style.display = "block";
     }
   </script>
@@ -27,70 +28,70 @@
     <div class="task">
       <strong>Frage 1:</strong> Ein Gerät verbraucht 150 W über 2 Stunden. Wie viel Energie in kWh und J?<br>
       <textarea placeholder="Antwort eingeben..."></textarea><br>
-      <button onclick="showSolution(1, `0.3 kWh = 1.08 · 10⁶ J`)">Lösung anzeigen</button>
+      <button onclick="showSolution(1, `E = P · t = 150 W · 2 h = 300 Wh = 0,3 kWh = 0,3 · 3.6 · 10⁶ J = 1,08 · 10⁶ J`)">Lösung anzeigen</button>
       <div class="feedback" id="solution_1"></div>
     </div>
 
     <div class="task">
       <strong>Frage 2:</strong> Ein Photon hat die Frequenz 6 · 10¹⁴ Hz. Wie groß ist seine Energie?<br>
       <textarea placeholder="Antwort eingeben..."></textarea><br>
-      <button onclick="showSolution(2, `E = h·f ≈ 4 · 10⁻¹⁹ J`)">Lösung anzeigen</button>
+      <button onclick="showSolution(2, `E = h · f = 6,63·10⁻³⁴ Js · 6·10¹⁴ Hz = 3,978·10⁻¹⁹ J`)">Lösung anzeigen</button>
       <div class="feedback" id="solution_2"></div>
     </div>
 
     <div class="task">
       <strong>Frage 3:</strong> Ein Strom von 3 A fließt 5 Minuten bei 12 V. Welche Energie wird umgesetzt?<br>
       <textarea placeholder="Antwort eingeben..."></textarea><br>
-      <button onclick="showSolution(3, `E = U·I·t = 10800 J`)">Lösung anzeigen</button>
+      <button onclick="showSolution(3, `t = 5 min = 300 s, E = U · I · t = 12 V · 3 A · 300 s = 10.800 J`)">Lösung anzeigen</button>
       <div class="feedback" id="solution_3"></div>
     </div>
 
     <div class="task">
       <strong>Frage 4:</strong> Ein Laser liefert Photonen mit 2 eV. Wie viel Joule entspricht das?<br>
       <textarea placeholder="Antwort eingeben..."></textarea><br>
-      <button onclick="showSolution(4, `E = 3.2 · 10⁻¹⁹ J`)">Lösung anzeigen</button>
+      <button onclick="showSolution(4, `1 eV = 1,6·10⁻¹⁹ J, E = 2 eV = 2 · 1,6·10⁻¹⁹ J = 3,2·10⁻¹⁹ J`)">Lösung anzeigen</button>
       <div class="feedback" id="solution_4"></div>
     </div>
 
     <div class="task">
       <strong>Frage 5:</strong> Ein Verbraucher hat 60 W Leistung. Wie viel Strom bei 12 V?<br>
       <textarea placeholder="Antwort eingeben..."></textarea><br>
-      <button onclick="showSolution(5, `I = P / U = 5 A`)">Lösung anzeigen</button>
+      <button onclick="showSolution(5, `I = P / U = 60 W / 12 V = 5 A`)">Lösung anzeigen</button>
       <div class="feedback" id="solution_5"></div>
     </div>
 
     <div class="task">
       <strong>Frage 6:</strong> Ein Gerät erhält 1000 J und gibt 400 J nutzbar ab. Wirkungsgrad?<br>
       <textarea placeholder="Antwort eingeben..."></textarea><br>
-      <button onclick="showSolution(6, `η = 40 %`)">Lösung anzeigen</button>
+      <button onclick="showSolution(6, `η = Enutz / Ezu · 100 = 400 J / 1000 J · 100 = 40 %`)">Lösung anzeigen</button>
       <div class="feedback" id="solution_6"></div>
     </div>
 
     <div class="task">
       <strong>Frage 7:</strong> Ein Elektron fällt von E2 zu E1 mit ΔE = 2.5 eV. Welche Farbe hat das Licht?<br>
       <textarea placeholder="Antwort eingeben..."></textarea><br>
-      <button onclick="showSolution(7, `Wellenlänge ≈ 500 nm → grün`)">Lösung anzeigen</button>
+      <button onclick="showSolution(7, `E = h·f = hc/λ → λ = hc/E = 6,63·10⁻³⁴ Js · 3·10⁸ m/s / (2,5·1,6·10⁻¹⁹ J) ≈ 500 nm → grün`)">Lösung anzeigen</button>
       <div class="feedback" id="solution_7"></div>
     </div>
 
     <div class="task">
       <strong>Frage 8:</strong> Ein Akku liefert 5 V bei 2 A für 10 Minuten. Welche Energie?<br>
       <textarea placeholder="Antwort eingeben..."></textarea><br>
-      <button onclick="showSolution(8, `E = 6000 J`)">Lösung anzeigen</button>
+      <button onclick="showSolution(8, `t = 600 s, E = U · I · t = 5 V · 2 A · 600 s = 6000 J`)">Lösung anzeigen</button>
       <div class="feedback" id="solution_8"></div>
     </div>
 
     <div class="task">
       <strong>Frage 9:</strong> Um wie viel steigt Energie, wenn Frequenz verdoppelt wird?<br>
       <textarea placeholder="Antwort eingeben..."></textarea><br>
-      <button onclick="showSolution(9, `E verdoppelt sich`)">Lösung anzeigen</button>
+      <button onclick="showSolution(9, `E = h·f → wenn f verdoppelt, dann E auch verdoppelt`)">Lösung anzeigen</button>
       <div class="feedback" id="solution_9"></div>
     </div>
 
     <div class="task">
       <strong>Frage 10:</strong> Wie viel Energie liefert 1 kWh in Joule?<br>
       <textarea placeholder="Antwort eingeben..."></textarea><br>
-      <button onclick="showSolution(10, `3.6 · 10⁶ J`)">Lösung anzeigen</button>
+      <button onclick="showSolution(10, `1 kWh = 1000 W · 3600 s = 3,6 · 10⁶ J`)">Lösung anzeigen</button>
       <div class="feedback" id="solution_10"></div>
     </div>
 </div></body></html>
