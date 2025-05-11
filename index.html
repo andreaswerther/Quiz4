@@ -2,7 +2,7 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8">
-  <title>Quiz 4 – Rechnen mit Licht (detailliert)</title>
+  <title>Quiz 4 – Rechnen mit Licht (iPad-kompatibel)</title>
   <style>
     body { font-family: Arial, sans-serif; background: #f4f4f4; margin: 0; padding: 20px; }
     .container { max-width: 900px; margin: auto; background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
@@ -10,20 +10,19 @@
     .task { margin-bottom: 30px; }
     textarea { width: 100%; height: 40px; font-size: 14px; margin-top: 5px; }
     button { margin-top: 5px; padding: 8px 12px; font-size: 14px; }
-    .feedback { display: none; margin-top: 10px; background: #eef; padding: 10px; border-radius: 5px; white-space: pre-wrap; }
+    .feedback { display: none; margin-top: 10px; background: #eef; padding: 10px; border-radius: 5px; white-space: normal; }
   </style>
   <script>
     function showSolution(id, solution) {
       const elem = document.getElementById("solution_" + id);
-      elem.innerText = "Richtige Antwort:
-" + solution;
+      elem.innerHTML = "Richtige Antwort:<br>" + solution.replace(/\n/g, "<br>");
       elem.style.display = "block";
     }
   </script>
 </head>
 <body>
 <div class="container">
-  <h1>Quiz 4 – Rechnen mit Licht (mit vollständigen Rechenschritten)</h1>
+  <h1>Quiz 4 – Rechnen mit Licht (kompatibel für iPad)</h1>
 
     <div class="task">
       <strong>Frage 1:</strong> Ein Gerät verbraucht 150 W über 2 Stunden. Wie viel Energie in kWh und J?<br>
